@@ -3,6 +3,7 @@ var runSequence = require('run-sequence');
 
 // Project plugins
 var sass = require('gulp-sass');
+sass.compiler = require('node-sass');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
@@ -13,7 +14,7 @@ var autoprefixer = require('gulp-autoprefixer');
 
 // Configuration
 var config = require('./gulp.json');
-var themePath = 'wp-content/themes' + config.theme;
+var themePath = './wp-content/themes/' + config.theme;
 var distPath = themePath + '/dist';
 var assetPath = themePath + '/assets';
 
@@ -46,17 +47,10 @@ gulp.task('clean', function() {
 // Styles
 
 gulp.task('compile-styles', function() {
-	return (
-		gulp.src([
-			assetPath + '/scss/style/scss'
-		])
+	return gulp.src(assetPath + '/scss/style.scss')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-		.pipe(gulp.dest(distPath + '/css'))
-	);
+		.pipe(autoprefixer({ cascade: false }))
+		.pipe(gulp.dest(themePath));
 });
 
 gulp.task('optimize-styles', function() {
