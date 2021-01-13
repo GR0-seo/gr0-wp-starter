@@ -1,6 +1,6 @@
 {
   "name": "gr0-wp-starter",
-  "version": "0.1",
+  "version": "1.0.0",
   "description": "Local Wordpress/Docker starter project",
   "scripts": {
     "dev": "gulp",
