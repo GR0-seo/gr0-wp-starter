@@ -1,8 +1,8 @@
 /*
- * This file should only be used to import other styles.
- * No styles should be written here; if there are "generic"
- * styles to be included, then they should be in a file in
- * the imports/ folder.
+Theme Name: mcc
+Author: GR0
+Author URI: https://gr0.com/
+Version: 1.0
 */
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -7226,3 +7226,12 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+
+.screen-reader-text {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }

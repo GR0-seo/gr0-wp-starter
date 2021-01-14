@@ -56,7 +56,7 @@ gulp.task('compile-styles', function() {
 gulp.task('optimize-styles', function() {
 	return gulp.src(distPath + '/css/style.css')
 		.pipe(minifyCss())
-		.pipe(gulp.dest(distPath + '/css'));
+		.pipe(gulp.dest(themePath));
 });
 
 // Scripts

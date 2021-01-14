@@ -4,7 +4,8 @@
   "description": "Local Wordpress/Docker starter project",
   "scripts": {
     "dev": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp deploy-assets"
   },
   "author": "gr0-autt <base64 -d <<< YW50aG9ueSb1dHRAZ3IwLmNvbQo=>",
   "license": "GPL",
